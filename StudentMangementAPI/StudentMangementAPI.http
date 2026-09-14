@@ -1,0 +1,162 @@
+@StudentMangementAPI_HostAddress = https://localhost:7155
+
+### Get all students
+GET {{StudentMangementAPI_HostAddress}}/api/students
+Accept: application/json
+
+###
+
+### Get student by ID
+GET {{StudentMangementAPI_HostAddress}}/api/students/1
+Accept: application/json
+
+###
+
+### Create a student
+POST {{StudentMangementAPI_HostAddress}}/api/students
+Content-Type: application/json
+
+{
+  "firstName": "Michael",
+  "lastName": "Brown",
+  "email": "michael.brown@example.com",
+  "phone": "07000111222",
+  "dateOfBirth": "2003-07-10",
+  "enrollmentDate": "2026-09-01",
+  "isActive": true
+}
+
+###
+
+### Update a student
+PUT {{StudentMangementAPI_HostAddress}}/api/students/1
+Content-Type: application/json
+
+{
+  "firstName": "Michael",
+  "lastName": "Johnson",
+  "email": "michael.johnson@example.com",
+  "phone": "07000111222",
+  "dateOfBirth": "2003-07-10",
+  "enrollmentDate": "2026-09-01",
+  "isActive": true
+}
+
+### Delete a student
+DELETE {{StudentMangementAPI_HostAddress}}/api/students/2
+
+
+  ### Get all courses
+GET {{StudentMangementAPI_HostAddress}}/api/courses
+Accept: application/json
+
+###
+
+### Get course by ID
+GET {{StudentMangementAPI_HostAddress}}/api/courses/1
+Accept: application/json
+
+###
+
+### Create a course
+POST {{StudentMangementAPI_HostAddress}}/api/courses
+Content-Type: application/json
+
+{
+  "courseCode": "CS101",
+  "courseName": "Introduction to Programming",
+  "credits": 3
+}
+
+###
+
+### Update a course
+PUT {{StudentMangementAPI_HostAddress}}/api/courses/1
+Content-Type: application/json
+
+{
+  "courseCode": "CS101",
+  "courseName": "Introduction to C# Programming",
+  "credits": 4
+}
+
+###
+
+### Delete a course
+DELETE {{StudentMangementAPI_HostAddress}}/api/courses/1
+
+### Get all enrollments
+GET {{StudentMangementAPI_HostAddress}}/api/enrollments
+Accept: application/json
+
+###
+
+### Get enrollment by ID
+GET {{StudentMangementAPI_HostAddress}}/api/enrollments/1
+Accept: application/json
+
+###
+
+### Create an enrollment
+POST {{StudentMangementAPI_HostAddress}}/api/enrollments
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "courseId": 1,
+  "enrollmentDate": "2026-08-17",
+  "grade": ""
+}
+
+###
+
+### Update an enrollment
+PUT {{StudentMangementAPI_HostAddress}}/api/enrollments/1
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "courseId": 1,
+  "enrollmentDate": "2026-08-17",
+  "grade": "A"
+}
+
+###
+
+### Delete an enrollment
+DELETE {{StudentMangementAPI_HostAddress}}/api/enrollments/1
+
+### Get all departments
+GET {{StudentMangementAPI_HostAddress}}/api/departments
+Accept: application/json
+
+###
+
+### Get department by ID
+GET {{StudentMangementAPI_HostAddress}}/api/departments/1
+Accept: application/json
+
+###
+
+### Create department
+POST {{StudentMangementAPI_HostAddress}}/api/departments
+Content-Type: application/json
+
+{
+  "departmentName": "Computer Science"
+}
+
+###
+
+### Update department
+PUT {{StudentMangementAPI_HostAddress}}/api/departments/1
+Content-Type: application/json
+
+{
+  "departmentName": "Computer Science and Engineering"
+}
+
+###
+
+### Delete department
+DELETE {{StudentMangementAPI_HostAddress}}/api/departments/1
